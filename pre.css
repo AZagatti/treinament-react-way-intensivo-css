@@ -1,0 +1,202 @@
+:root {
+  --text-color: #fefefe;
+  --text-hover: #cccccc;
+  --background-color: #0f2748;
+  --table-odd-row: #2a2e46;
+  --opacity-black: rgba(255, 255, 255, 0.1);
+  --default-button: rgb(32, 116, 137);
+  --hover-button: rgb(29, 94, 110);
+  --medium-text: 20px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+p,
+button,
+input,
+textarea,
+td {
+  font-family: 'Roboto', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+th {
+  font-family: 'Roboto Slab', serif;
+}
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 32px;
+  box-shadow: 0px 1px 5px 0px var(--opacity-black);
+  background-color: var(--background-color);
+}
+header h2 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+header nav a {
+  font-size: var(--medium-text);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+header nav a + a {
+  margin-left: 16px;
+}
+header nav a:hover {
+  color: var(--text-hover);
+}
+#loading {
+  margin-left: 16px;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+main > * {
+  padding-top: 40px;
+  margin-top: -40px;
+}
+main,
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+main article::after,
+main > div::after,
+main section::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--opacity-black);
+}
+main div table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid var(--text-color);
+  padding: 8px;
+}
+tfoot th {
+  text-align: center;
+}
+tbody tr:nth-child(odd) {
+  background-color: var(--table-odd-row);
+}
+thead th:nth-child(1) {
+  width: 10%;
+}
+tbody td:nth-child(1) {
+  text-align: center;
+}
+thead th:nth-child(3) {
+  width: 50%;
+}
+section form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+section form div {
+  display: flex;
+  flex-direction: column;
+}
+section form label {
+  font-size: 18px;
+}
+section form input,
+select,
+textarea {
+  padding: 8px 16px;
+  border: 2px solid var(--text-color);
+  border-radius: 4px;
+  color: #333;
+  margin-top: 8px;
+}
+section form textarea {
+  resize: vertical;
+  min-height: 33px;
+  max-height: 80px;
+}
+section form button {
+  border: none;
+  background-color: var(--default-button);
+  font-size: var(--medium-text);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+section form button:hover {
+  background-color: var(--hover-button);
+}
+.midias div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer p {
+  font-weight: bold;
+  font-size: var(--medium-text);
+}
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav a + a {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+  section form {
+    display: flex;
+    flex-direction: column;
+  }
+  .midias div {
+    display: flex;
+    flex-direction: column;
+  }
+  iframe,
+  embed {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  footer {
+    padding: 0 16px;
+  }
+}

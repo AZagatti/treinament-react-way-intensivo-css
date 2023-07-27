@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Intensivo CSS</title>
+  </head>
+  <body>
+    <header>
+      <h2>
+        Módulo de intensivo
+        <div id="loading"></div>
+      </h2>
+      <nav>
+        <a href="#introducao">Introdução</a>
+        <a href="#topicos">Tópicos</a>
+        <a href="#cronograma">Cronograma</a>
+        <a href="#avaliacao">Avaliação</a>
+        <a href="#midias">Mídias</a>
+      </nav>
+    </header>
+    <main>
+      <article id="introducao">
+        <h2>Introdução sobre o módulo</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur
+          modi corporis maxime nostrum laudantium sint, nemo rem nesciunt
+          ducimus minus molestias provident magni, fugiat quidem cum molestiae!
+          Atque, possimus ex!
+        </p>
+      </article>
+      <div id="topicos">
+        <h2>Tópicos tratados no módulo</h2>
+        <ol>
+          <li>
+            <p>Intensivo CSS</p>
+            <ul>
+              <li>Intensivo HTML</li>
+              <li>Intensivo CSS</li>
+              <li>Intensivo JS</li>
+              <li>Intensivo TS</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+      <div id="cronograma">
+        <h2>Cronograma do módulo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Assuntos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Intensivo HTML</td>
+              <td>Introdução ao HTML e como utilizá-lo.</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Intensivo CSS</td>
+              <td>Estilizando páginas com CSS.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Intensivo JS</td>
+              <td>Aprendendo a linguagem de programação JavaScript.</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Intensivo TS</td>
+              <td>Como e por que utilizar o superset TypeScript.</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <th colspan="3">André Zagatti</th>
+          </tfoot>
+        </table>
+      </div>
+      <section id="avaliacao">
+        <h2>Form de avaliação do módulo</h2>
+        <form action="">
+          <div>
+            <label for="nome">Nome:</label>
+            <input id="nome" type="text" />
+          </div>
+          <div>
+            <label for="email">Email:</label>
+            <input id="email" type="text" />
+          </div>
+          <div>
+            <label for="nota">Nota:</label>
+            <select name="nota" id="nota">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div>
+            <label for="comentarios">Comentários:</label>
+            <textarea id="comentarios" type="text"></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+      <div id="midias" class="midias">
+        <h2>Mídias</h2>
+        <div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12674.546038380051!2d-122.0840897!3d37.4220656!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6c296c66619367e0!2sGoogleplex!5e0!3m2!1spt-BR!2sbr!4v1659994688320!5m2!1spt-BR!2sbr"
+            width="45%"
+            height="315"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <embed
+            width="45%"
+            height="315"
+            src="https://www.youtube.com/embed/voezkpydLD8"
+          />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>André Zagatti 🚀</p>
+      <p>2023</p>
+    </footer>
+  </body>
+</html>
